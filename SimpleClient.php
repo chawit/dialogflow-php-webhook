@@ -4,7 +4,7 @@ $json_data = json_decode($postData, true);
 $responseText = "Hello From php Server(You said ".$json_data["queryResult"]["queryText"].")"."<br>Response ID:".$json_data["responseId"].
 $response = array(
     "source" => "From Fulfillment",
-    "fulfillmentText"=> ,
+    "fulfillmentText"=> $responseText,
     );
 echo json_encode($response);
 ?>
